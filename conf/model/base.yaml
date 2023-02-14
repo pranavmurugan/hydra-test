@@ -1,0 +1,14 @@
+# https://hydra.cc/docs/advanced/instantiate_objects/overview/
+_target_: core.DemoModel
+
+step1:
+  _target_: core.Step
+  mu: 1
+  sigma: 1
+
+step2:
+  _target_: core.Step
+  mu: 2
+  sigma: 2
+
+n: 10

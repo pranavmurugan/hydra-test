@@ -1,0 +1,19 @@
+defaults:
+  # https://hydra.cc/docs/tutorials/basic/your_first_app/defaults/
+  - run: base
+  - model: base
+  - model/step2: large
+  - _self_
+
+model:
+  step1:
+    mu: 5 # overrides step1 defaults in model/base
+  
+  n: 5 # overrides model.base
+
+hydra:
+  # https://hydra.cc/docs/configure_hydra/intro/
+  job:
+    name: Example1
+  run:
+    dir: output/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}

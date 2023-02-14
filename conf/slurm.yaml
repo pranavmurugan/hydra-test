@@ -1,0 +1,4 @@
+num_cpus: 1
+num_hours: 1
+partition: submit
+num_gpus: 0
